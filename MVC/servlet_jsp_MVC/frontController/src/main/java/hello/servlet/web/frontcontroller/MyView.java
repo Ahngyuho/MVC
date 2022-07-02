@@ -15,6 +15,7 @@ public class MyView {
 
     public void render(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+        //jsp 렌더링
         dispatcher.forward(request,response);
     }
 }

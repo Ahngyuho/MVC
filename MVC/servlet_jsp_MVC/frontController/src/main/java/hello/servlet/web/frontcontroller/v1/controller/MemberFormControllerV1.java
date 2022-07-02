@@ -12,7 +12,7 @@ public class MemberFormControllerV1 implements ControllerV1 {
 
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //이 serviec가 이 아래의 jsp 경로를 호출
+        //이 service가 이 아래의 jsp 경로를 호출
         String viewPath = "/WEB-INF/views/new-form.jsp";
         //이건 컨트롤러에서 뷰로 이동할 때 사용하는 것임
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);//이 경로로 이동

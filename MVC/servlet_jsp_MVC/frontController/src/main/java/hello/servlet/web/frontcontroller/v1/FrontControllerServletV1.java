@@ -16,9 +16,13 @@ import java.util.Map;
 @WebServlet(name = "frontControllerServletV1",urlPatterns = "/front-controller/v1/*")
 public class FrontControllerServletV1 extends HttpServlet {
 
+    //매핑정보
+    //url이 호춯되면 컨트롤러 V1을 꺼내서 실행
+    //key==url value==ControllerV1
     private Map<String,ControllerV1> controllerMap = new HashMap<>();
 
 
+    //생성자에 매핑정보를 넣어두면 됨
     public FrontControllerServletV1() {
         controllerMap.put("/front-controller/v1/members/new-form",new MemberFormControllerV1());
         controllerMap.put("/front-controller/v1/members/save",new MemberSaveControllerV1());
